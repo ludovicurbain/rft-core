@@ -78,7 +78,7 @@ required_packages['xlrd']={"pip_working": True, "nexus_pkg_available": True, "ve
 required_packages['xlutils']={"pip_working": True, "nexus_pkg_available": True, "version": "==2.0.0", "description": "Utilities for working with Excel files that require both xlrd and xlwt"}
 required_packages['xlwt']={"pip_working": True, "nexus_pkg_available": True, "version": "==1.3.0", "description": "Library to create spreadsheet files compatible with MS Excel 97/2000/XP/2003 XLS files, on any platform, with Python 2.6, 2.7, 3.3+"}
 required_packages['wheel']={"pip_working": True, "nexus_pkg_available": True, "version": "==0.33.4", "description": ""}
-required_packages['robotframework-sikulilibrary']={"pip_working": False, "version": "==1.0.5", "description": "Sikuli Robot Framework Library provide keywords for Robot Framework to test UI through Sikuli.", "pip_error": "Read Timeout in pip and browser, Nexus seems to have speed and reliability issues. When failed after 4 timeouts, serves 404 for 10-20 seconds before working again"}
+#required_packages['robotframework-sikulilibrary']={"pip_working": False, "version": "==1.0.5", "description": "Sikuli Robot Framework Library provide keywords for Robot Framework to test UI through Sikuli.", "pip_error": "Read Timeout in pip and browser, Nexus seems to have speed and reliability issues. When failed after 4 timeouts, serves 404 for 10-20 seconds before working again"}
 
 from setuptools import setup
 			
