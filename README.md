@@ -1,2 +1,0 @@
-# rft-core
-RobotFramework Toolkit
