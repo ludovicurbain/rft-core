@@ -90,8 +90,8 @@ def pkg_list():
 
 setup(name='rft-core',
       version='0.3',
-      description='coming soon',
-      url='coming soon',
+      description='RobotFramework Toolkit',
+      url='https://github.com/ludovicurbain/rft-core.git',
       author='Ludovic Urbain',
       author_email='ludovic.urbain@swift.com',
       license='MIT',
