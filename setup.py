@@ -57,14 +57,14 @@ required_packages['robotframework-autoitlibrary']={"pip_working": True, "nexus_p
 required_packages['robotframework-databaselibrary']={"pip_working": True, "nexus_pkg_available": True, "version": "==1.2", "description": "Database utility library for Robot Framework"}
 required_packages['robotframework-excellib']={"pip_working": True, "nexus_pkg_available": True, "version": "==1.1.0", "description": "This test library provides some keywords to allow opening, reading, writing and saving Excel files from Robot Framework."}
 required_packages['robotframework-faker']={"pip_working": True, "nexus_pkg_available": True, "version": "==4.2.0", "description": ""}
-required_packages['robotframework-httplibrary3']={"pip_working": True, "nexus_pkg_available": True, "version": "==0.5.0", "description": ""}
+required_packages['robotframework-httplibrary3']={"pip_working": True, "nexus_pkg_available": True, "version": "==0.6.0", "description": ""}
 required_packages['robotframework-requests']={"pip_working": True, "nexus_pkg_available": True, "version": "==0.5.0", "description": "Robot Framework keyword library wrapper around requests"}
 required_packages['robotframework-ride']={"pip_working": True, "nexus_pkg_available": True, "version": "==1.7.3.1", "description": "Robot Framework is a generic test automation framework for acceptance level testing. RIDE is a lightweight and intuitive editor for Robot Framework test data."}
 required_packages['robotframework-seleniumlibrary']={"pip_working": True, "nexus_pkg_available": True, "version": "==3.3.1", "description": ""}
 required_packages['robotframework-selenium2library']={"pip_working": True, "nexus_pkg_available": True, "version": "==3.0.0", "description": ""}
 required_packages['robotframework-sshlibrary']={"pip_working": True, "nexus_pkg_available": True, "version": "==3.3.0", "description": "", "pip_error": "Depends on PyNaCl and Cryptography"}
 required_packages['robotframework-stringformat']={"pip_working": True, "nexus_pkg_available": True, "version": "==0.1.8", "description": "StringFormat is a string formatter for Robot Framework. This library is a python .format() wrapper."}
-required_packages['robotframework-sudslibrary3']={"pip_working": True, "nexus_pkg_available": True, "version": "==0.8", "description": ""}
+required_packages['robotframework-sudslibrary3']={"pip_working": True, "nexus_pkg_available": True, "version": "==0.9", "description": ""}
 required_packages['selenium']={"pip_working": True, "nexus_pkg_available": True, "version": "==3.141.0", "description": "Python language bindings for Selenium WebDriver"}
 required_packages['setuptools']={"pip_working": True, "nexus_pkg_available": True, "version": "==41.0.1", "description": "SetupTools."}
 required_packages['six']={"pip_working": True, "nexus_pkg_available": True, "version": "==1.12.0", "description": "Python 2 and 3 compatibility utilities"}
@@ -89,7 +89,7 @@ def pkg_list():
 	return a
 
 setup(name='rft-core',
-      version='0.3',
+      version='0.4.0',
       description='RobotFramework Toolkit',
       url='https://github.com/ludovicurbain/rft-core.git',
       author='Ludovic Urbain',
