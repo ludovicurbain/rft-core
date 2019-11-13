@@ -7,7 +7,7 @@ import os
 required_packages=collections.OrderedDict()
 required_packages['influx-client']={"pip_working": True, "nexus_pkg_available": True, "version": "==1.9", "description": ""}
 required_packages['pytest']={"pip_working": True, "nexus_pkg_available": True, "version": "<5.0.0", "description": ""}
-required_packages['requests']={"pip_working": True, "nexus_pkg_available": True, "version": "==2.21.0", "pip_error": "", "description": ""}
+required_packages['requests']={"pip_working": True, "nexus_pkg_available": True, "version": "==2.22.0", "pip_error": "", "description": ""}
 required_packages['adodbapi']={"pip_working": True, "nexus_pkg_available": True, "version": "==2.6.0.7", "pip_error": "https://pypi.org/simple/adodbapi/ only lists 2.6.0.7 so maybe we have to use that instead of 2.0", "description": "A pure Python package implementing PEP 249 DB-API using Microsoft ADO."}
 required_packages['asn1crypto']={"pip_working": True, "nexus_pkg_available": True, "version": "==0.24.0", "description": "Fast ASN.1 parser and serializer with definitions for private keys, public keys, certificates, CRL, OCSP, CMS, PKCS#3, PKCS#7, PKCS#8, PKCS#12, PKCS#5, X.509 and TSP"}
 required_packages['bcrypt']={"pip_working": True, "nexus_pkg_available": True, "version": "==3.1.6", "description": "Modern password hashing for your software and your servers"}
@@ -43,6 +43,8 @@ required_packages['pyasn1-modules']={"pip_working": True, "nexus_pkg_available":
 required_packages['pycparser']={"pip_working": True, "nexus_pkg_available": True, "version": "==2.19", "description": "C parser in Python"}
 required_packages['pycryptodome']={"pip_working": True, "nexus_pkg_available": True, "version": "==3.8.1", "description": "Cryptographic modules for Python."}
 required_packages['pygments']={"pip_working": True, "nexus_pkg_available": True, "version": "==2.4.0", "description": "Pygments is a syntax highlighting package written in Python."}
+required_packages['pymysql']={"pip_working": True, "nexus_pkg_available": True, "version": "==0.9.3", "description": ""}
+required_packages['psycopg2']={"pip_working": True, "nexus_pkg_available": True, "version": "==2.8.4", "description": ""}
 required_packages['pynacl']={"pip_working": True, "nexus_pkg_available": True, "version": "==1.3.0", "description": "Python binding to the Networking and Cryptography (NaCl) library", "pip_error": "make utility is missing from path"}
 required_packages['pyopenssl']={"pip_working": True, "nexus_pkg_available": True, "version": "==19.0.0", "pip_error": "Problems installing Cryptography", "description": "Cryptographic modules for Python."}
 required_packages['pypubsub']={"pip_working": True, "nexus_pkg_available": True, "version": "==3.3.0", "description": "Python Publish-Subscribe Package", "pip_error": "Version 4.0.0 not available"}
@@ -51,14 +53,12 @@ required_packages['python-dateutil']={"pip_working": True, "nexus_pkg_available"
 required_packages['python-jenkins']={"pip_working": True, "nexus_pkg_available": True, "version": "==1.4.0", "description": ""}
 required_packages['robotframework']={"pip_working": True, "nexus_pkg_available": True, "version": "==3.1.1", "description": ""}
 required_packages['robotframework-archivelibrary']={"pip_working": True, "nexus_pkg_available": True, "version": "==0.4.0", "description": "Robot Framework keyword library for handling ZIP files"}
-required_packages['robotframework-autoitlibrary']={"pip_working": True, "nexus_pkg_available": True, "version": "==1.2.4", "description": ""}
 required_packages['robotframework-databaselibrary']={"pip_working": True, "nexus_pkg_available": True, "version": "==1.2", "description": "Database utility library for Robot Framework"}
 required_packages['robotframework-excellib']={"pip_working": True, "nexus_pkg_available": True, "version": "==1.1.0", "description": "This test library provides some keywords to allow opening, reading, writing and saving Excel files from Robot Framework."}
 required_packages['robotframework-faker']={"pip_working": True, "nexus_pkg_available": True, "version": "==4.2.0", "description": ""}
 required_packages['robotframework-httplibrary3']={"pip_working": True, "nexus_pkg_available": True, "version": "==0.6.0", "description": ""}
 required_packages['robotframework-pabot']={"pip_working": True, "nexus_pkg_available": True, "version": "== 0.86", "description": ""}
 required_packages['robotframework-requests']={"pip_working": True, "nexus_pkg_available": True, "version": "==0.5.0", "description": "Robot Framework keyword library wrapper around requests"}
-required_packages['robotframework-ride']={"pip_working": True, "nexus_pkg_available": True, "version": "==1.7.3.1", "description": "Robot Framework is a generic test automation framework for acceptance level testing. RIDE is a lightweight and intuitive editor for Robot Framework test data."}
 required_packages['robotframework-seleniumlibrary']={"pip_working": True, "nexus_pkg_available": True, "version": "==3.3.1", "description": ""}
 required_packages['robotframework-selenium2library']={"pip_working": True, "nexus_pkg_available": True, "version": "==3.0.0", "description": ""}
 required_packages['robotframework-sikulilibrary']={"pip_working": False, "version": "==1.0.8", "description": "Sikuli Robot Framework Library provide keywords for Robot Framework to test UI through Sikuli.", "pip_error": "Read Timeout in pip and browser, Nexus seems to have speed and reliability issues. When failed after 4 timeouts, serves 404 for 10-20 seconds before working again"}
@@ -73,18 +73,21 @@ required_packages['suds2']={"pip_working": True, "nexus_pkg_available": True, "v
 required_packages['suds-jurko']={"pip_working": True, "nexus_pkg_available": True, "version": "==0.6", "description": ""}
 required_packages['tlslite']={"pip_working": True, "nexus_pkg_available": True, "version": "==0.4.9", "description": "tlslite implements SSL and TLS."}
 required_packages['typing']={"pip_working": True, "nexus_pkg_available": True, "version": "==3.6.6", "description": "Type Hints for Python"}
-required_packages['wxpython']={"pip_working": True, "nexus_pkg_available": True, "version": "==4.0.4", "description": "Cross platform GUI toolkit for Python, \"Phoenix\" version", "pip_error": "Depends on Pypubsub"}
 required_packages['xlrd']={"pip_working": True, "nexus_pkg_available": True, "version": "==1.2.0", "description": "Library for developers to extract data from Microsoft Excel (tm) spreadsheet files"}
 required_packages['xlutils']={"pip_working": True, "nexus_pkg_available": True, "version": "==2.0.0", "description": "Utilities for working with Excel files that require both xlrd and xlwt"}
 required_packages['xlwt']={"pip_working": True, "nexus_pkg_available": True, "version": "==1.3.0", "description": "Library to create spreadsheet files compatible with MS Excel 97/2000/XP/2003 XLS files, on any platform, with Python 2.6, 2.7, 3.3+"}
 required_packages['wheel']={"pip_working": True, "nexus_pkg_available": True, "version": "==0.33.4", "description": ""}
 
+
 from sys import platform
 if platform == "win32":
 	required_packages['pywin32']={"pip_working": True, "nexus_pkg_available": True, "version": "==224", "description": "Python extensions for Microsoft Windows Provides access to much of the Win32 API, the ability to create and use COM objects,and the Pythonwin environment.", "pip_error": "Our pip can't find it in our Nexus although it's there"}
 	required_packages['autoitlibrary3']={"pip_working": True, "nexus_pkg_available": True, "version": "==1.1.post1", "description": ""}
-	required_packages['SendKeys']={"pip_working": True, "nexus_pkg_available": True, "version": "==0.3", "description": ""}
-	
+	required_packages['robotframework-autoitlibrary']={"pip_working": True, "nexus_pkg_available": True, "version": "==1.2.4", "description": ""}
+	required_packages['wxpython']={"pip_working": True, "nexus_pkg_available": True, "version": "==4.0.4", "description": "Cross platform GUI toolkit for Python, \"Phoenix\" version", "pip_error": "Depends on Pypubsub"}
+	required_packages['robotframework-swift-ride']={"pip_working": True, "nexus_pkg_available": True, "version": "==1.7.4", "description": "Robot Framework is a generic test automation framework for acceptance level testing. RIDE is a lightweight and intuitive editor for Robot Framework test data."}
+	#required_packages['SendKeys']={"pip_working": True, "nexus_pkg_available": True, "version": "==0.3", "description": ""}
+	#footprint!!!!!
 else:
 	required_packages['pexpect']={"pip_working": True, "nexus_pkg_available": True, "version": "==4.7.0", "description": "Pexpect allows easy control of interactive console applications."}
 	required_packages['ptyprocess']={"pip_working": True, "nexus_pkg_available": True, "version": "==0.6.0", "description": "Run a subprocess in a pseudo terminal"}
@@ -98,7 +101,7 @@ def pkg_list():
 	return a
 
 setup(name='rft-core',
-      version='0.7.0',
+      version='0.9.0',
       description='RobotFramework Toolkit',
       url='https://github.com/ludovicurbain/rft-core.git',
       author='Ludovic Urbain',
