@@ -125,8 +125,7 @@ required_packages['xlwt']="==1.3.0"
 required_packages['wheel']="==0.33.4"
 
 
-from sys import platform
-if platform == "win32":
+if os.name == "win32":
 	required_packages['pywin32']="==225"
 	required_packages['autoitlibrary3']="==1.1.post1"
 	required_packages['robotframework-autoitlibrary']="==1.2.4"
@@ -145,7 +144,7 @@ def pkg_list():
 	return a
 
 setup(name='rft-core',
-      version='1.2.4',
+      version='1.3.2',
       description='RobotFramework Toolkit',
       url='https://github.com/ludovicurbain/rft-core.git',
       author='Ludovic Urbain',
